@@ -9,7 +9,8 @@
 #
 # More generic pages.
 ^blog.*html$		blog.html	BlogCompositor
-^.*html$  		page.html	StaticCompositor
+index.html$  		page.html	StaticCompositor
+^.*html$  		page-announce.html	StaticCompositor
 ^.*~			empty		NullCompositor
 # The image template ("empty") is just an empty file.  We don't
 # actually use it, but it's saner to have it than to special case the
