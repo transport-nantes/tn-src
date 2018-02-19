@@ -5,13 +5,13 @@
 # Patterns are attempted in order, the first matching pattern is used.
 #
 # One-off pages.
-## None for now.
+^./index.html$ 		page.html	StaticCompositor
+^.*~			empty		NullCompositor
+^.*\#.* 		empty		NullCompositor
 #
 # More generic pages.
 ^blog.*html$		blog.html	BlogCompositor
-index.html$  		page.html	StaticCompositor
 ^.*html$  		page-announce.html	StaticCompositor
-^.*~			empty		NullCompositor
 # The image template ("empty") is just an empty file.  We don't
 # actually use it, but it's saner to have it than to special case the
 # config reading code.

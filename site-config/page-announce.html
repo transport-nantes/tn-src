@@ -15,11 +15,14 @@
 	</script>
 	{% endif %}
 	<title>{{title}}</title>
-	{% if css_text %}
 	<style>
-	    {{ css_text }}
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="stylesheet" type="text/css" href="site.css">
+	 <link rel="icon" type="image/png" href="favicon.png">
+	 {% if css_text %}
+	 {{ css_text }}
+	 {% endif %}
 	</style>
-	{% endif %}
 <!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];
@@ -38,6 +41,27 @@
 <!-- End Piwik Code -->
     </head>
     <body class="announce">
+	<div class="hero-transparent">
+	    <div class="hero-head-left">
+		<img src="logoneg320.png">
+	    </div>
+	    <div class="hero-head-right">
+		<i class="fa fa-facebook" aria-hidden="true"></i>
+		<i class="fa fa-twitter" aria-hidden="true"></i>
+		<!-- <i class="fa fa-phone" aria-hidden="true"></i> -->
+		<i class="fa fa-envelope" aria-hidden="true"></i>
+		&nbsp;&nbsp;
+		<button class="contact-button">Contact</button>
+	    </div>
+	    <div class="announce-text">
 	{{body}}
+		<button class="contact-button">Contact</button>
+		&nbsp;&nbsp;
+		<i class="fa fa-facebook" aria-hidden="true"></i>
+		<i class="fa fa-twitter" aria-hidden="true"></i>
+		<!-- <i class="fa fa-phone" aria-hidden="true"></i> -->
+		<i class="fa fa-envelope" aria-hidden="true"></i>
+	    </div>
+	</div> 
     </body>
 </html>
