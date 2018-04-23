@@ -5,7 +5,7 @@
 	{% if refresh_url %}
 	<META HTTP-EQUIV="Refresh" CONTENT="{{delay}}; URL={{refresh_url}}">
 	{% endif %}
-	<link rel="stylesheet" type="text/css" href="https://www.transport-nantes.com/site.css">
+	<link rel="stylesheet" type="text/css" href="/site.css">
 	{% if javascript_file %}
 	<script type="text/javascript" src="{{ javascript_file }}" async></script>
 	{% endif %}
@@ -41,26 +41,37 @@
 <!-- End Piwik Code -->
     </head>
     <body class="announce">
+
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id)) return;
+		    js = d.createElement(s); js.id = id;
+		    js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+		    fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));</script>
+
 	<div class="hero-transparent">
 	    <div class="hero-head-left">
-		<img src="logoneg320.png">
+		<img src="/logoneg320.png">
 	    </div>
 	    <div class="hero-head-right">
-		<i class="fa fa-facebook" aria-hidden="true"></i>
-		<i class="fa fa-twitter" aria-hidden="true"></i>
-		<!-- <i class="fa fa-phone" aria-hidden="true"></i> -->
-		<i class="fa fa-envelope" aria-hidden="true"></i>
-		&nbsp;&nbsp;
+
+		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Je soutiens la liberté de ne pas bouchonner !" data-via="@TransportNantes" data-hashtags="Nantes30" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+		<div class="fb-share-button" data-href="https://www.facebook.com/transport.nantes/" data-layout="button" data-size="small" data-mobile-iframe="false"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Ftransport.nantes%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
 		<button class="contact-button">Contact</button>
 	    </div>
 	    <div class="announce-text">
+
 	{{body}}
+
+		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Je soutiens la liberté de ne pas bouchonner !" data-via="@TransportNantes" data-hashtags="Nantes30" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+		<div class="fb-share-button" data-href="https://www.facebook.com/transport.nantes/" data-layout="button" data-size="small" data-mobile-iframe="false"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Ftransport.nantes%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
 		<button class="contact-button">Contact</button>
-		&nbsp;&nbsp;
-		<i class="fa fa-facebook" aria-hidden="true"></i>
-		<i class="fa fa-twitter" aria-hidden="true"></i>
-		<!-- <i class="fa fa-phone" aria-hidden="true"></i> -->
-		<i class="fa fa-envelope" aria-hidden="true"></i>
+
 	    </div>
 	</div> 
     </body>
