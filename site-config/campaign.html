@@ -1,0 +1,66 @@
+<html>
+    <head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% if refresh_url %}
+	<META HTTP-EQUIV="Refresh" CONTENT="{{delay}}; URL={{refresh_url}}">
+	{% endif %}
+	<link rel="stylesheet" type="text/css" href="/site.css">
+	{% if javascript_file %}
+	<script type="text/javascript" src="{{ javascript_file }}" async></script>
+	{% endif %}
+	{% if javascript_inline %}
+	<script type="text/javascript">
+	 {{ javascript_inline }}
+	</script>
+	{% endif %}
+	<title>{{title}}</title>
+	<style>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="stylesheet" type="text/css" href="site.css">
+	 <link rel="icon" type="image/png" href="favicon.png">
+	 {% if css_text %}
+	 {{ css_text }}
+	 {% endif %}
+	</style>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//data.p27.eu/p/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+    </head>
+    <body class="campaign">
+
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+	<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Je soutiens la liberté de ne pas bouchonner !" data-via="@TransportNantes" data-hashtags="Nantes30" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<a href="/avec-nous.html">Help!</a>
+
+{{body}}
+
+<div class="fb-share-button" data-href="https://www.facebook.com/transport.nantes/" data-layout="button" data-size="small" data-mobile-iframe="false"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Ftransport.nantes%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
+	<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Je soutiens la liberté de ne pas bouchonner !" data-via="@TransportNantes" data-hashtags="Nantes30" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+	<a href="/avec-nous.html">Help!</a>
+    </body>
+</html>

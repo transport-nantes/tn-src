@@ -11,6 +11,7 @@
 #
 # More generic pages.
 ^blog.*html$		blog.html	BlogCompositor
+^./c/.*html$		campaign.html	StaticCompositor
 ^.*html$  		page-announce.html	StaticCompositor
 # The image template ("empty") is just an empty file.  We don't
 # actually use it, but it's saner to have it than to special case the
